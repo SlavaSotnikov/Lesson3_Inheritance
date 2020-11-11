@@ -5,20 +5,22 @@ namespace Task0
     class Program
     {
         static void Main()
-        {            
-            RedPrinter red = new RedPrinter();
-            GreenPrinter green = new GreenPrinter();
-            YellowPrinter yellow = new YellowPrinter();
+        {
+            ColorPrint red = new ColorPrint(ConsoleColor.Red);
+            red.Print("Inheritance");
 
-            Printer[] print = new Printer[3];
-            print[0] = red;
-            print[1] = green;
-            print[2] = yellow;
+            ColorPrint green = new ColorPrint(ConsoleColor.Green);
+            green.Print("Inheritance");
 
-            for (int i = 0; i < print.Length; i++)
-            {
-                print[i].Print("Inheritance & Polymorphism");
-            }
+            Printer printer = red;
+            printer.Print("Inheritance");
+
+            /*Printer red = new Printer(ConsoleColor.Red);
+            red.Print("Inheritance");
+
+            Printer green = new Printer(ConsoleColor.Green);
+            green.Print("Inheritance");
+            */
             Console.ReadLine();
         }
     }
