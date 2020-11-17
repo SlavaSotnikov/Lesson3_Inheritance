@@ -8,21 +8,21 @@ namespace Task2
 {
     class Student
     {
-        public void Study()
+        public virtual void Study()
         {
-
+            Console.WriteLine("Student.Study well");
         }
-        public void Read()
+        public virtual void Read()
         {
-
+            Console.WriteLine("Student.Read well");
         }
-        public void Write()
+        public virtual void Write()
         {
-
+            Console.WriteLine("Student.Write well");
         }
-        public void Relax()
+        public virtual void Relax()
         {
-
+            Console.WriteLine("Student.Write well");
         }
     }
 }
